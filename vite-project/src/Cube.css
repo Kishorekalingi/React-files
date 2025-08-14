@@ -1,0 +1,107 @@
+body{
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100svh;
+    background-color: black;
+    perspective: 1000px;
+}
+.cube{
+    width: 200px;
+    height: 200px;
+    /* border: 1px solid rgb(255, 255, 255); */
+    transform-style: preserve-3d;
+    position: relative;
+    animation: myanimation 5s infinite linear alternate;
+
+}
+@keyframes myanimation{
+
+    100%{
+       
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+.child{
+    border: 4px solid white;
+}
+
+.left{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    position: absolute;
+    /* opacity: 0.6; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+
+    background-color: red;
+    transform: rotateY(90deg) translateZ(100px);
+}
+
+.right{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    position: absolute;
+    /* opacity: 0.6; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-color: green;
+    transform: rotateY(90deg) translateZ(-100px);
+}
+.top{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    position: absolute;
+    /* opacity: 0.6; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-color: white;
+    transform: rotateX(90deg) translateZ(100px);
+}
+.child2{
+    border: 4px solid black;
+}
+.bottom{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    position: absolute;
+    /* opacity: 0.6; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-color: orangered;
+    transform: rotateX(90deg) translateZ(-100px);
+}
+.front{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    position: absolute;
+    /* opacity: 0.6; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-color: blue;
+    transform: translateZ(100px);
+}
+.back{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    position: absolute;
+    /* opacity: 0.6; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-color:yellow;
+    transform: translateZ(-100px);
+}
+
